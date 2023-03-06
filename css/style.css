@@ -16,8 +16,16 @@ body {
   background-color: var(--bg--primary);
   font-size: 1.6rem;
   color: var(--fc-primary);
-  
-  
+}
+
+.page {
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 header {
