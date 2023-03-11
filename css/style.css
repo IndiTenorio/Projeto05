@@ -32,6 +32,8 @@ header {
   font-family: var(--font-family-heading);
   text-align: center;
   margin: 10rem 0 8rem;
+  animation-name: leftright; 
+  animation-duration: 2s;
 }
 
 header p {
@@ -58,12 +60,21 @@ main {
 .card {
   position: relative;
   font-family: var(--font-family-heading);
+  animation-name: rightleft;
+  animation-duration: 2s;
+  
 }
 
 .card img {
   height: 41.6rem;
   object-fit: cover;
   border-radius: 0.6rem;
+  transition: all 200ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
 }
 
 .card h2 {
@@ -90,4 +101,27 @@ span {
   height: 3.8rem;
   color: black;
   width: fit-content;
+}
+
+@keyframes leftright {
+  0% { 
+    transform: translateX(-6rem);
+    opacity: 0;
+  }
+
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightleft {
+  0% {
+    transform: translateX(6rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
